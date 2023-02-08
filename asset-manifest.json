@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-saga-charts-demo/static/css/main.359bdbf6.css",
-    "main.js": "/react-saga-charts-demo/static/js/main.4a4ec1b3.js",
-    "static/js/787.650215b6.chunk.js": "/react-saga-charts-demo/static/js/787.650215b6.chunk.js",
-    "index.html": "/react-saga-charts-demo/index.html",
-    "main.359bdbf6.css.map": "/react-saga-charts-demo/static/css/main.359bdbf6.css.map",
-    "main.4a4ec1b3.js.map": "/react-saga-charts-demo/static/js/main.4a4ec1b3.js.map",
-    "787.650215b6.chunk.js.map": "/react-saga-charts-demo/static/js/787.650215b6.chunk.js.map"
+    "main.css": "./static/css/main.bd768f56.css",
+    "main.js": "./static/js/main.c7244c6d.js",
+    "static/js/787.650215b6.chunk.js": "./static/js/787.650215b6.chunk.js",
+    "index.html": "./index.html",
+    "main.bd768f56.css.map": "./static/css/main.bd768f56.css.map",
+    "main.c7244c6d.js.map": "./static/js/main.c7244c6d.js.map",
+    "787.650215b6.chunk.js.map": "./static/js/787.650215b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.359bdbf6.css",
-    "static/js/main.4a4ec1b3.js"
+    "static/css/main.bd768f56.css",
+    "static/js/main.c7244c6d.js"
   ]
 }
