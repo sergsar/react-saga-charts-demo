@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Dashboard from './pages/Dashboard'
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate, HashRouter} from "react-router-dom";
 import Header from "./components/Header";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header />
         <div className="container">
             <Routes>
@@ -14,7 +14,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
