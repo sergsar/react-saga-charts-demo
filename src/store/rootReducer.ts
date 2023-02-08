@@ -1,10 +1,11 @@
-import { combineReducers } from "redux";
-import marketReducer from "./market/reducer"
+import { combineReducers } from 'redux'
+
+import marketReducer from './market/reducer'
 
 const rootReducer = combineReducers({
-    market: marketReducer
-});
+  market: marketReducer
+})
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>
 
-export default rootReducer;
+export default rootReducer

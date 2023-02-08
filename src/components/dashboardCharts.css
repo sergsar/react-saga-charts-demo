@@ -1,19 +1,19 @@
 .dashboard-charts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 40px;
-    max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
 }
 
 .dashboard-chart {
-    width: 44%;
-    margin: auto;
+  width: 44%;
+  margin: auto;
 }
 
 @media (max-width: 900px) {
-    .dashboard-chart {
-        width: 90%;
-    }
+  .dashboard-chart {
+    width: 90%;
+  }
 }

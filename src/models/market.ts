@@ -1,12 +1,12 @@
-import {IChartData} from "./chart-data";
+import { IChartData } from './chart-data'
 
 export interface IMarket {
-    charts: IMarketCharts;
+  charts: IMarketCharts
 }
 
 export interface IMarketCharts {
-    waiters: IChartData[];
-    salesPerHour: IChartData[];
-    payments: IChartData[];
-    categories: IChartData[];
+  waiters: IChartData[]
+  salesPerHour: IChartData[]
+  payments: IChartData[]
+  categories: IChartData[]
 }

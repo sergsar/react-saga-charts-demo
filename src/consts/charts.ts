@@ -1,1 +1,1 @@
-export const CHART_ASPECT = 16 / 7;
+export const CHART_ASPECT = 16 / 7

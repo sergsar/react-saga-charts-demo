@@ -1,9 +1,9 @@
 export interface IMarketResponse {
-    sections: IMarketSection[]
+  sections: IMarketSection[]
 }
 
 export interface IMarketSection {
-    elements: IMarketSectionElement[][]
+  elements: IMarketSectionElement[][]
 }
 
-export type IMarketSectionElement = any[][];
+export type IMarketSectionElement = never[][]
