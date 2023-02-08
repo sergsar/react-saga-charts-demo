@@ -1,14 +1,18 @@
 import axios, {AxiosResponse} from "axios";
-import {IMarketResponse} from "./types";
 import {all, call, put, takeLatest} from "redux-saga/effects";
 import {fetchMarketFailure, fetchMarketSuccess} from "./actions";
 import {marketTypes} from "./marketTypes";
+import {IMarketResponse} from "../../contracts/market-response";
+import {IMarketRequest} from "../../contracts/market-request";
 
-const getMarket = () => axios.get<IMarketResponse>('data/response.json');
+const getMarket = (request?: IMarketRequest) => {
+    console.log('request::', request)
+    return axios.get<IMarketResponse>('data/response.json')
+};
 
-function* fetchMarketSaga() {
+function* fetchMarketSaga(action: any) {
     try {
-        const response: AxiosResponse = yield call(getMarket);
+        const response: AxiosResponse = yield call(getMarket, action.payload.request as IMarketRequest);
         yield put(
             fetchMarketSuccess({
                 market: response.data

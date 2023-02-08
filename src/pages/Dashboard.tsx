@@ -1,23 +1,12 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../store/rootReducer";
-import {fetchMarketRequest} from "../store/market/actions";
+import React from "react";
+import DashboardCharts from "../components/DashboardCharts";
+import './dashboard.css';
 
 const Dashboard: React.FC<{}> = (props: any) => {
-    const dispatch = useDispatch();
-
-    const marketState = useSelector(
-        (state: RootState) => state.market
-    )
-
-    useEffect(() => {
-        dispatch(fetchMarketRequest())
-    }, []);
-
-    console.log('market: ', marketState)
-
     return (
-        <div>Dashboard</div>
+        <div className="dashboard">
+            <DashboardCharts />
+        </div>
     )
 }
 

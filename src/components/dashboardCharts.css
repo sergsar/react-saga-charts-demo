@@ -1,0 +1,18 @@
+.dashboard-charts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+
+.dashboard-chart {
+    width: 40%;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+    .dashboard-chart {
+        width: 90%;
+    }
+}

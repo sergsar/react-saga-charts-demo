@@ -1,14 +1,17 @@
 import {
     FetchMarketFailure,
     FetchMarketFailurePayload,
-    FetchMarketRequest,
+    FetchMarketRequest, FetchMarketRequestPayload,
     FetchMarketSuccess,
     FetchMarketSuccessPayload
 } from "./types";
 import {marketTypes} from "./marketTypes";
 
-export const fetchMarketRequest = (): FetchMarketRequest => ({
-    type: marketTypes.FETCH_MARKET_REQUEST
+export const fetchMarketRequest = (
+    payload: FetchMarketRequestPayload
+): FetchMarketRequest => ({
+    type: marketTypes.FETCH_MARKET_REQUEST,
+    payload
 });
 
 export const fetchMarketSuccess = (

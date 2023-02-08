@@ -1,21 +1,15 @@
 import {marketTypes} from "./marketTypes"
-
-export interface IMarketResponse {
-    sections: IMarketSection[]
-}
-
-export interface IMarketSection {
-    elements: IMarketSectionElement[][]
-}
-
-export interface IMarketSectionElement {
-
-}
+import {IMarketResponse} from "../../contracts/market-response";
+import {IMarketRequest} from "../../contracts/market-request";
 
 export interface MarketState {
     pending: boolean;
     market: IMarketResponse | null;
     error: string | null;
+}
+
+export interface FetchMarketRequestPayload {
+    request: IMarketRequest;
 }
 
 export interface FetchMarketSuccessPayload {
@@ -28,6 +22,7 @@ export interface FetchMarketFailurePayload {
 
 export interface FetchMarketRequest {
     type: typeof marketTypes.FETCH_MARKET_REQUEST;
+    payload: FetchMarketRequestPayload;
 }
 
 export type FetchMarketSuccess = {
