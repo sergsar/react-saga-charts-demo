@@ -4,6 +4,8 @@ import {PieChart as RechartsPieChart, Pie} from "recharts";
 import clsx from 'clsx';
 import './chart.css'
 import {IChartData} from "../models/chart-data";
+import millify from "millify";
+import {CHART_ASPECT} from "../consts/charts";
 
 interface PieChartProps {
     data: IChartData[];
@@ -16,11 +18,11 @@ const PieChart: React.FC<PieChartProps> = ({ data, title, className }) => {
     return (
         <div className={clsx('chart', className)}>
             <h3 className="chart-title">{title}</h3>
-            <ResponsiveContainer width="100%" aspect={2 / 1}>
+            <ResponsiveContainer width="100%" aspect={CHART_ASPECT}>
                 <RechartsPieChart>
                     <Pie data={data} dataKey="value" nameKey="name" />
-                    <Tooltip />
-                    <Legend />
+                    <Tooltip formatter={(value) => millify(+value)} />
+                    <Legend layout="vertical" verticalAlign="middle" align="left"/>
                 </RechartsPieChart>
             </ResponsiveContainer>
         </div>

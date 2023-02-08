@@ -3,6 +3,8 @@ import {CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis, Bar} from "re
 import {BarChart as RechartsBarChart} from "recharts";
 import {IChartData} from "../models/chart-data";
 import clsx from "clsx";
+import millify from "millify";
+import {CHART_ASPECT} from "../consts/charts";
 
 interface BarChartProps {
     data: IChartData[];
@@ -16,13 +18,13 @@ export const BarChart: React.FC<BarChartProps> = ({data, title, className}) => {
     return (
         <div className={clsx('chart', className)}>
             <h3 className="chart-title">{title}</h3>
-            <ResponsiveContainer width="100%" aspect={2 / 1}>
+            <ResponsiveContainer width="100%" aspect={CHART_ASPECT}>
                 <RechartsBarChart data={data} layout="vertical">
-                    <XAxis type="number" />
+                    <XAxis type="number" tickFormatter={(value) => millify(value)} />
                     <YAxis type="category" dataKey="name" />
                     <Bar dataKey={dataKey} fill="#5550bd"/>
-                    <Tooltip cursor={{ fill: 'transparent' }}/>
-                    {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
+                    <Tooltip formatter={(value) => millify(+value)} cursor={{ fill: 'transparent' }}/>
+                    {grid && <CartesianGrid horizontal={false} stroke="#e0dfdf" strokeDasharray="5 5" />}
                 </RechartsBarChart>
             </ResponsiveContainer>
         </div>

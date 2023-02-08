@@ -1,10 +1,10 @@
 import {marketTypes} from "./marketTypes"
-import {IMarketResponse} from "../../contracts/market-response";
 import {IMarketRequest} from "../../contracts/market-request";
+import {IMarket} from "../../models/market";
 
 export interface MarketState {
     pending: boolean;
-    market: IMarketResponse | null;
+    market: IMarket | null;
     error: string | null;
 }
 
@@ -13,7 +13,7 @@ export interface FetchMarketRequestPayload {
 }
 
 export interface FetchMarketSuccessPayload {
-    market: IMarketResponse[];
+    market: IMarket;
 }
 
 export interface FetchMarketFailurePayload {

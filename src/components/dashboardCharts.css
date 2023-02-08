@@ -4,10 +4,11 @@
     flex-wrap: wrap;
     gap: 40px;
     padding: 40px;
+    max-width: 1200px;
 }
 
 .dashboard-chart {
-    width: 40%;
+    width: 44%;
     margin: auto;
 }
 

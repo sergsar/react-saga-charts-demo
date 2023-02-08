@@ -4,18 +4,19 @@ import {fetchMarketFailure, fetchMarketSuccess} from "./actions";
 import {marketTypes} from "./marketTypes";
 import {IMarketResponse} from "../../contracts/market-response";
 import {IMarketRequest} from "../../contracts/market-request";
+import {buildMarket} from "../../utils/market";
 
-const getMarket = (request?: IMarketRequest) => {
-    console.log('request::', request)
-    return axios.get<IMarketResponse>('data/response.json')
+const getMarket = (request: IMarketRequest) => {
+    return axios.get<IMarketResponse>(`data/response-${request.args.days}.json`)
 };
 
 function* fetchMarketSaga(action: any) {
     try {
-        const response: AxiosResponse = yield call(getMarket, action.payload.request as IMarketRequest);
+        const response: AxiosResponse<IMarketResponse> = yield call(getMarket, action.payload.request as IMarketRequest);
+        const market = buildMarket(response.data)
         yield put(
             fetchMarketSuccess({
-                market: response.data
+                market
             })
         )
     } catch (e: any) {
