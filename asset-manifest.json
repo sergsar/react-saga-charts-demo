@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-saga-charts-demo/dashboard/static/css/main.359bdbf6.css",
-    "main.js": "/react-saga-charts-demo/dashboard/static/js/main.ace7b1fb.js",
+    "main.js": "/react-saga-charts-demo/dashboard/static/js/main.3255dc78.js",
     "static/js/787.650215b6.chunk.js": "/react-saga-charts-demo/dashboard/static/js/787.650215b6.chunk.js",
     "index.html": "/react-saga-charts-demo/dashboard/index.html",
     "main.359bdbf6.css.map": "/react-saga-charts-demo/dashboard/static/css/main.359bdbf6.css.map",
-    "main.ace7b1fb.js.map": "/react-saga-charts-demo/dashboard/static/js/main.ace7b1fb.js.map",
+    "main.3255dc78.js.map": "/react-saga-charts-demo/dashboard/static/js/main.3255dc78.js.map",
     "787.650215b6.chunk.js.map": "/react-saga-charts-demo/dashboard/static/js/787.650215b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.359bdbf6.css",
-    "static/js/main.ace7b1fb.js"
+    "static/js/main.3255dc78.js"
   ]
 }
